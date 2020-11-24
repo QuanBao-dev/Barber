@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quattrocento+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="./index.js" defer></script>
+    <title>Barber</title>
+  </head>
+
+  <body>
+    <header class="header1">
+      <div class="header1__logo">BARBER</div>
+      <div class="menu-toggle">
+        <div class="one"></div>
+        <div class="two"></div>
+        <div class="three"></div>
+      </div>
+    </header>
+    <div class="overlay"></div>
+    <div class="mobile-navigation">
+      <a href="#home">
+        <div
+          id="link-home-mobile"
+          class="mobile-navigation__link mobile-navigation__link-active"
+        >
+          Home
+        </div>
+      </a>
+      <a href="#about">
+        <div id="link-about-mobile" class="mobile-navigation__link">About</div>
+      </a>
+      <a href="#services">
+        <div id="link-services-mobile" class="mobile-navigation__link">
+          Services
+        </div>
+      </a>
+      <a href="#barbers">
+        <div id="link-barbers-mobile" class="mobile-navigation__link">
+          Barbers
+        </div>
+      </a>
+      <a href="#testimonials">
+        <div id="link-testimonials-mobile" class="mobile-navigation__link">
+          testimonials
+        </div>
+      </a>
+      <a href="#portfolio">
+        <div id="link-portfolio-mobile" class="mobile-navigation__link">
+          portfolio
+        </div>
+      </a>
+      <a href="#prices">
+        <div id="link-prices-mobile" class="mobile-navigation__link">
+          prices
+        </div>
+      </a>
+      <a href="#contacts">
+        <div id="link-contacts-mobile" class="mobile-navigation__link">
+          Contacts
+        </div>
+      </a>
+      <div class="container-mobile-contacts">
+        <div class="inner-mobile-contacts">
+          <div>
+            <i class="fas fa-phone"></i>
+          </div>
+          <div class="contact-text">
+            <p>1-800-00-000-0000</p>
+            <p>1-800-00-200-0010</p>
+          </div>
+        </div>
+        <div class="inner-mobile-contacts">
+          <div>
+            <i class="fas fa-map-marker-alt"></i>
+          </div>
+          <div class="contact-text">
+            <p>11301 West Olympic Boulevard</p>
+            <p>New Yourk, USA</p>
+          </div>
+        </div>
+        <div class="inner-mobile-contacts">
+          <div>
+            <i class="far fa-clock"></i>
+          </div>
+          <div class="contact-text">
+            <p>Mon-Fri</p>
+            <p>9.00 - 18.00</p>
+          </div>
+        </div>
+      </div>
+      <div class="mobile-navigation__container-search">
+        <i class="fa fa-search"></i>
+        <input type="text" required />
+        <label>Search...</label>
+      </div>
+    </div>
+    <header class="header">
+      <div class="header__wrapper-container-address">
+        <div class="header__container-address-info">
+          <div>
+            <span class="header__logo"> Barber </span>
+          </div>
+          <div class="header__block-child-information">
+            <div>
+              <i class="fas fa-phone"></i>
+            </div>
+            <div>
+              <p>1-800-00-000-0000</p>
+              <p>1-800-00-200-0010</p>
+            </div>
+          </div>
+          <div class="header__block-child-information">
+            <div>
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div>
+              <p>11301 West Olympic Boulevard</p>
+              <p>New Yourk, USA</p>
+            </div>
+          </div>
+          <div class="header__block-child-information">
+            <div>
+              <i class="far fa-clock"></i>
+            </div>
+            <div>
+              <p>Mon-Fri</p>
+              <p>9.00 - 18.00</p>
+            </div>
+          </div>
+          <div class="header__conatiner-search-input">
+            <i class="fa fa-search"></i>
+            <input type="text" required />
+            <label>Search</label>
+          </div>
+        </div>
+      </div>
+      <div class="header__nav-bar-container">
+        <ul class="header__nav-bar-list">
+          <a href="#home">
+            <li
+              id="link-home"
+              class="header__nav-bar-item header__nav-item-active"
+            >
+              Home
+            </li>
+          </a>
+          <a href="#about">
+            <li id="link-about">About</li>
+          </a>
+          <a href="#services">
+            <li id="link-services">Services</li>
+          </a>
+          <a href="#barbers">
+            <li id="link-barbers">Barbers</li>
+          </a>
+          <a href="#testimonials">
+            <li id="link-testimonials">testimonials</li>
+          </a>
+          <a href="#portfolio">
+            <li id="link-portfolio">portfolio</li>
+          </a>
+          <a href="#prices">
+            <li id="link-prices">prices</li>
+          </a>
+          <a href="#contacts">
+            <li id="link-contacts">Contacts</li>
+          </a>
+        </ul>
+      </div>
+    </header>
+    <section class="main-slider" id="home">
+      <ul class="main-slider__slide-list">
+        <div class="main-slider__slide-item-wrapper--absolute">
+          <li class="main-slider__slide-item image-1">
+            <div class="main-slider__block-title">
+              <span>WELCOME</span>
+              <span>TO THE</span>
+              <span class="main-slider__main-title">BARBERSHOP</span>
+              <a href="#appointment">Make An Appointment</a>
+            </div>
+          </li>
+        </div>
+        <div class="main-slider__slide-item-wrapper--absolute">
+          <li class="main-slider__slide-item active image-2">
+            <div class="main-slider__block-title">
+              <span>NEW</span>
+              <span>YORK's</span>
+              <span class="main-slider__main-title">№1</span>
+              <span class="main-slider__main-title">BARBERSHOP</span>
+            </div>
+          </li>
+        </div>
+      </ul>
+    </section>
+    <section id="about">
+      <section class="about-us">
+        <div class="about-us__title">ABOUT US</div>
+        <div class="about-us__section-icon"></div>
+        <p class="about-us__text-introduction">
+          We are quality control, high level of service. Our masters equally
+          professionally own all the techniques of shaving and haircuts.
+        </p>
+        <ul class="about-us__why-us-list">
+          <li class="about-us__why-us-item">
+            <div class="about-us__why-us-inner-item">
+              <div class="about-us__icon-circle">
+                <img
+                  src="https://lodegal.github.io/portfolio/projects/Barber/img/svg/razor-hair-salon-tool.svg"
+                />
+              </div>
+              <h3 class="about-us__title-why-us">New Yourk’s №1 Barbershop</h3>
+              <div class="about-us__about-form-text">
+                The city has many hairdressing salons, berbershops and other
+                establishments, where the face and head of a man can be put in
+                order. But we still insist - better to get a haircut and shave
+                with us.
+              </div>
+            </div>
+          </li>
+          <li class="about-us__why-us-item">
+            <div class="about-us__why-us-inner-item">
+              <div class="about-us__icon-circle">
+                <img
+                  src="https://lodegal.github.io/portfolio/projects/Barber/img/svg/scissor-and-comb.svg"
+                />
+              </div>
+              <h3 class="about-us__title-why-us">Profeccionals Barbers</h3>
+              <div class="about-us__about-form-text">
+                It is our work not just ordinary hairdressers, but barbers who
+                will be able to make a hairstyle of any complexity that will
+                underline your masculinity, originality and individuality. Even
+                the thread in the hands of our specialists is a tool.
+              </div>
+            </div>
+          </li>
+          <li class="about-us__why-us-item width-cover">
+            <div class="about-us__why-us-inner-item">
+              <div class="about-us__icon-circle">
+                <img
+                  src="https://lodegal.github.io/portfolio/projects/Barber/img/svg/spray-bottles.svg"
+                />
+              </div>
+              <h3 class="about-us__title-why-us">Branded Products</h3>
+              <div class="about-us__about-form-text">
+                We have not only the best craftsmen in the city, but also
+                everything that a man who follows his appearance can only need.
+                You did not even imagine that there are such effective means for
+                caring for the hair, beard and skin of the face. We will help
+                you to look your best every day.
+              </div>
+            </div>
+          </li>
+        </ul>
+      </section>
+      <section class="section-advantage">
+        <div class="section-advantage-wrapper">
+          <div class="section-advantage__item-info">
+            <p class="section-advantage__title-number" data-count-number="2500">
+              2500
+            </p>
+            <span>Happy Clients</span>
+          </div>
+          <div class="section-advantage__item-info">
+            <p class="section-advantage__title-number" data-count-number="300">
+              300
+            </p>
+            <span>Coffee Cups</span>
+          </div>
+          <div class="section-advantage__item-info">
+            <p class="section-advantage__title-number" data-count-number="120">
+              120
+            </p>
+            <span>Barbers</span>
+          </div>
+          <div class="section-advantage__item-info">
+            <p class="section-advantage__title-number" data-count-number="30">
+              30
+            </p>
+            <span>Stores</span>
+          </div>
+        </div>
+      </section>
+    </section>
+    <section id="services">
+      <section class="our-service">
+        <div class="about-us__title">OUR SERVICES</div>
+        <div class="about-us__section-icon"></div>
+        <p class="about-us__text-introduction">
+          You have sat down and relaxed, resting from work and day-to-day bustle
+          while the master is working on your style.
+        </p>
+        <div class="our-service__container-service-display">
+          <ul class="our-service__container-service-list">
+            <li class="our-service__container-service-item left">
+              <div class="our-service__icon">
+                <img
+                  src="https://lodegal.github.io/portfolio/projects/Barber/img/svg/hairdresser-with-scissors-cutting-the-hair-to-a-client-sitting-in-front-of-him.svg"
+                />
+              </div>
+              <div class="our-service__text-description align-right">
+                <h3>Hair cut</h3>
+                <p>
+                  It is our work is not just ordinary hairdressers, but barbers,
+                  who will be able to make a hairstyle of any complexity!
+                </p>
+              </div>
+            </li>
+            <li class="our-service__container-service-item right">
+              <div class="our-service__icon">
+                <img
+                  src="https://lodegal.github.io/portfolio/projects/Barber/img/svg/hairdresser-with-spray-bottle-behind-the-client-of-hair-salon.svg"
+                />
+              </div>
+              <div class="our-service__text-description align-left">
+                <h3>Hair styling</h3>
+                <p>
+                  It is our work is not just ordinary hairdressers, but barbers,
+                  who will be able to make a hairstyle of any complexity!
+                </p>
+              </div>
+            </li>
+            <li class="our-service__container-service-item left">
+              <div class="our-service__icon">
+                <img
+                  src="https://lodegal.github.io/portfolio/projects/Barber/img/svg/hairdresser-washing-the-hair-of-a-client-with-bubbles-shampoo.svg"
+                />
+              </div>
+              <div class="our-service__text-description align-right">
+                <h3>Hair wash</h3>
+                <p>
+                  Our masters will quickly and gently wash your hair or beard.
+                  We use only branded products.
+                </p>
+              </div>
+            </li>
+            <li class="our-service__container-service-item right">
+              <div class="our-service__icon">
+                <img
+                  src="https://lodegal.github.io/portfolio/projects/Barber/img/svg/hairdresser-applying-hair-dye-to-a-client-of-hair-salon.svg"
+                />
+              </div>
+              <div class="our-service__text-description align-left">
+                <h3>Shave</h3>
+                <p>
+                  We pay much attention to the haircut of the beard and
+                  mustache, because for many men they make up 90% of the image.
+                  If you are a happy owner of a beard and mustache, we will help
+                  make them wonderful.
+                </p>
+              </div>
+            </li>
+          </ul>
+          <img
+            class="our-service__background"
+            src="https://lodegal.github.io/portfolio/projects/Barber/img/services-bg.png"
+          />
+          <div class="our-service__background-client-image">
+            <img
+              src="https://lodegal.github.io/portfolio/projects/Barber/img/services-bg-man.png"
+            />
+          </div>
+        </div>
+      </section>
+      <section class="make-an-appointment" id="appointment">
+        <div class="about-us__title">MAKE AN APPOINTMENT</div>
+        <div class="about-us__section-icon"></div>
+        <p class="about-us__text-introduction text-white-50">
+          Select the service to record online:
+        </p>
+        <form class="make-an-appointment__form-data">
+          <div class="make-an-appointment__container-inner-elem m-right">
+            <input class="make-an-appointment__input" type="text" required />
+            <label>Name</label>
+          </div>
+          <div
+            class="make-an-appointment__container-inner-elem select2-container m-left"
+          >
+            <select class="make-an-appointment__select2" required>
+              <option class="option-hidden-default"></option>
+              <option>Hair cur</option>
+              <option>Hair wash</option>
+              <option>Hair styling</option>
+              <option>Face shave</option>
+            </select>
+            <label>Service</label>
+          </div>
+          <div class="make-an-appointment__container-inner-elem m-right">
+            <input class="make-an-appointment__input" type="text" required />
+            <label>Phone</label>
+          </div>
+          <div
+            class="make-an-appointment__container-inner-elem select2-container m-left"
+          >
+            <select class="make-an-appointment__select2" required>
+              <option class="option-hidden-default"></option>
+              <option>Darrell Gibbs</option>
+              <option>David Clarke</option>
+              <option>Richard Owens</option>
+            </select>
+            <label>Barber</label>
+          </div>
+          <div class="make-an-appointment__container-inner-elem m-right">
+            <input class="make-an-appointment__input" type="text" required />
+            <label>E-mail</label>
+          </div>
+          <div
+            class="make-an-appointment__container-inner-elem m-left date-picker"
+          >
+            <input class="make-an-appointment__input" type="date" required />
+            <label>Date</label>
+          </div>
+          <div class="make-an-appointment__container-textarea">
+            <textarea class="make-an-appointment__textarea" required></textarea>
+            <label for="">Message</label>
+          </div>
+          <div class="make-an-appointment__container-link">
+            <button href="#appointment">Make An Appointment</button>
+          </div>
+        </form>
+      </section>
+    </section>
+    <section class="our-barbers" id="barbers">
+      <div class="about-us__title">OUR BARBERS</div>
+      <div class="about-us__section-icon"></div>
+      <p class="about-us__text-introduction">
+        Our masters equally professionally own all the techniques of shaving and
+        haircuts, so regardless of the choice of barber you will get the result
+        you came for.
+      </p>
+      <div class="our-barbers__list-card-barber">
+        <div class="our-barbers__card-barber-item">
+          <div class="our-barbers__image-barber">
+            <img
+              src="https://lodegal.github.io/portfolio/projects/Barber/img/barber/b1.jpg"
+            />
+          </div>
+          <h2>Darell Gibbs</h2>
+          <ul class="barber-rating">
+            <li class="barber-rating-item">
+              <i class="fas fa-star"></i>
+            </li>
+            <li class="barber-rating-item">
+              <i class="fas fa-star"></i>
+            </li>
+            <li class="barber-rating-item">
+              <i class="fas fa-star"></i>
+            </li>
+            <li class="barber-rating-item">
+              <i class="fas fa-star"></i>
+            </li>
+            <li class="barber-rating-item">
+              <i class="fas fa-star"></i>
+            </li>
+          </ul>
+        </div>
+        <div class="our-barbers__card-barber-item">
+          <div class="our-barbers__image-barber">
+            <img
+              src="https://lodegal.github.io/portfolio/projects/Barber/img/barber/b2.jpg"
+            />
+          </div>
+          <h2>David Clarke</h2>
+          <ul class="barber-rating">
+            <li class="barber-rating-item">
+              <i class="fas fa-star"></i>
+            </li>
+            <li class="barber-rating-item">
+              <i class="fas fa-star"></i>
+            </li>
+            <li class="barber-rating-item">
+              <i class="fas fa-star"></i>
+            </li>
+            <li class="barber-rating-item">
+              <i class="fas fa-star"></i>
+            </li>
+            <li class="barber-rating-item">
+              <i class="far fa-star"></i>
+            </li>
+          </ul>
+        </div>
+        <div class="our-barbers__card-barber-item">
+          <div class="our-barbers__image-barber">
+            <img
+              src="https://lodegal.github.io/portfolio/projects/Barber/img/barber/b3.jpg"
+            />
+          </div>
+          <h2>Richard Owens</h2>
+          <ul class="barber-rating">
+            <li class="barber-rating-item">
+              <i class="fas fa-star"></i>
+            </li>
+            <li class="barber-rating-item">
+              <i class="fas fa-star"></i>
+            </li>
+            <li class="barber-rating-item">
+              <i class="fas fa-star"></i>
+            </li>
+            <li class="barber-rating-item">
+              <i class="fas fa-star"></i>
+            </li>
+            <li class="barber-rating-item">
+              <i class="far fa-star"></i>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section id="testimonials" class="testimonials">
+      <div class="testimonials__image-container">
+        <img
+          src="https://lodegal.github.io/portfolio/projects/Barber/img/clients-bg.jpg"
+        />
+      </div>
+      <div class="testimonials__our-clients-container">
+        <div class="about-us__title">OUR BARBERS</div>
+        <div class="about-us__section-icon"></div>
+        <p class="about-us__text-introduction">
+          Testimonials from customers of the barber shop.
+        </p>
+        <div class="testimonials__container-slider-parent">
+          <div id="left-chevron" class="testimonials__icon-chevron">
+            <i class="fas fa-chevron-left"></i>
+          </div>
+          <div class="testimonials__wrapper-slider-container">
+            <div class="testimonials__slider-container">
+              <div class="testimonials__slide-item">
+                <ul class="barber-rating">
+                  <li class="barber-rating-item">
+                    <i class="fas fa-star"></i>
+                  </li>
+                  <li class="barber-rating-item">
+                    <i class="fas fa-star"></i>
+                  </li>
+                  <li class="barber-rating-item">
+                    <i class="fas fa-star"></i>
+                  </li>
+                  <li class="barber-rating-item">
+                    <i class="fas fa-star"></i>
+                  </li>
+                  <li class="barber-rating-item">
+                    <i class="fas fa-star"></i>
+                  </li>
+                </ul>
+                <p>
+                  Employees: cheerful, energetic, kind, stylish. The quality of
+                  the haircut at the height (I came, without the final, exact
+                  desire that I want, did not know what exactly.) Finally, I
+                  trusted the master and waited for the result).The haircut is
+                  abrupt, I was approached, pleased. 10/10
+                </p>
+                <img
+                  src="https://lodegal.github.io/portfolio/projects/Barber/img/review/r3.jpg"
+                />
+                <span class="review-name">Albert O’Connor</span>
+              </div>
+              <div class="testimonials__slide-item">
+                <ul class="barber-rating">
+                  <li class="barber-rating-item">
+                    <i class="fas fa-star"></i>
+                  </li>
+                  <li class="barber-rating-item">
+                    <i class="fas fa-star"></i>
+                  </li>
+                  <li class="barber-rating-item">
+                    <i class="fas fa-star"></i>
+                  </li>
+                  <li class="barber-rating-item">
+                    <i class="fas fa-star"></i>
+                  </li>
+                  <li class="barber-rating-item">
+                    <i class="far fa-star"></i>
+                  </li>
+                </ul>
+                <p>
+                  A good salon, comfortable armchairs, excellent service, which
+                  includes a variety of drinks, and relaxing music. And most
+                  importantly, they are excellent master hairdressers, I already
+                  had a haircut for two of them, and I am pleased with the work
+                  of both. I will continue to visit this salon.
+                </p>
+                <img
+                  src="https://lodegal.github.io/portfolio/projects/Barber/img/review/r1.jpg"
+                />
+                <span class="review-name">Matthew Turner</span>
+              </div>
+              <div class="testimonials__slide-item">
+                <ul class="barber-rating">
+                  <li class="barber-rating-item">
+                    <i class="fas fa-star"></i>
+                  </li>
+                  <li class="barber-rating-item">
+                    <i class="fas fa-star"></i>
+                  </li>
+                  <li class="barber-rating-item">
+                    <i class="fas fa-star"></i>
+                  </li>
+                  <li class="barber-rating-item">
+                    <i class="fas fa-star"></i>
+                  </li>
+                  <li class="barber-rating-item">
+                    <i class="fas fa-star"></i>
+                  </li>
+                </ul>
+                <p>
+                  Here you can not only make a haircut, but also have a good
+                  rest. Always you will be offered coffee and other drinks. I'm
+                  constantly adjusting the haircut. Masters work at the proper
+                  level, always in the course of different novelties, give
+                  useful advice. Armchairs are very comfortable.
+                </p>
+                <img
+                  src="https://lodegal.github.io/portfolio/projects/Barber/img/review/r2.jpg"
+                />
+                <span class="review-name">Albert O’Connor</span>
+              </div>
+              <div class="testimonials__slide-item">
+                <ul class="barber-rating">
+                  <li class="barber-rating-item">
+                    <i class="fas fa-star"></i>
+                  </li>
+                  <li class="barber-rating-item">
+                    <i class="fas fa-star"></i>
+                  </li>
+                  <li class="barber-rating-item">
+                    <i class="fas fa-star"></i>
+                  </li>
+                  <li class="barber-rating-item">
+                    <i class="fas fa-star"></i>
+                  </li>
+                  <li class="barber-rating-item">
+                    <i class="fas fa-star"></i>
+                  </li>
+                </ul>
+                <p>
+                  Employees: cheerful, energetic, kind, stylish. The quality of
+                  the haircut at the height (I came, without the final, exact
+                  desire that I want, did not know what exactly.) Finally, I
+                  trusted the master and waited for the result).The haircut is
+                  abrupt, I was approached, pleased. 10/10
+                </p>
+                <img
+                  src="https://lodegal.github.io/portfolio/projects/Barber/img/review/r3.jpg"
+                />
+                <span class="review-name">Albert O’Connor</span>
+              </div>
+              <div class="testimonials__slide-item">
+                <ul class="barber-rating">
+                  <li class="barber-rating-item">
+                    <i class="fas fa-star"></i>
+                  </li>
+                  <li class="barber-rating-item">
+                    <i class="fas fa-star"></i>
+                  </li>
+                  <li class="barber-rating-item">
+                    <i class="fas fa-star"></i>
+                  </li>
+                  <li class="barber-rating-item">
+                    <i class="fas fa-star"></i>
+                  </li>
+                  <li class="barber-rating-item">
+                    <i class="far fa-star"></i>
+                  </li>
+                </ul>
+                <p>
+                  A good salon, comfortable armchairs, excellent service, which
+                  includes a variety of drinks, and relaxing music. And most
+                  importantly, they are excellent master hairdressers, I already
+                  had a haircut for two of them, and I am pleased with the work
+                  of both. I will continue to visit this salon.
+                </p>
+                <img
+                  src="https://lodegal.github.io/portfolio/projects/Barber/img/review/r1.jpg"
+                />
+                <span class="review-name">Matthew Turner</span>
+              </div>
+            </div>
+            <div class="testimonials__page-list">
+              <div class="testimonials__page-item"></div>
+              <div class="testimonials__page-item"></div>
+              <div class="testimonials__page-item"></div>
+            </div>
+          </div>
+          <div id="right-chevron" class="testimonials__icon-chevron">
+            <i class="fas fa-chevron-right"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="portfolio" class="portfolio">
+      <div class="portfolio__container">
+        <div class="about-us__title">OUR GALLERY</div>
+        <div class="about-us__section-icon"></div>
+        <p class="about-us__text-introduction">
+          Here you can see real examples of the work of our masters.
+        </p>
+        <div class="portfolio__gallery-container">
+          <img
+            src="https://lodegal.github.io/portfolio/projects/Barber/img/gallery/g1.jpg"
+          />
+          <img
+            src="https://lodegal.github.io/portfolio/projects/Barber/img/gallery/g2.jpg"
+          />
+          <img
+            src="https://lodegal.github.io/portfolio/projects/Barber/img/gallery/g3.jpg"
+          />
+          <img
+            src="https://lodegal.github.io/portfolio/projects/Barber/img/gallery/g4.jpeg"
+          />
+          <img
+            src="https://lodegal.github.io/portfolio/projects/Barber/img/gallery/g5.jpeg"
+          />
+          <img
+            src="https://lodegal.github.io/portfolio/projects/Barber/img/gallery/g6.jpg"
+          />
+          <img
+            src="https://lodegal.github.io/portfolio/projects/Barber/img/gallery/g7.jpeg"
+          />
+          <img
+            src="https://lodegal.github.io/portfolio/projects/Barber/img/gallery/g8.jpeg"
+          />
+          <img
+            src="https://lodegal.github.io/portfolio/projects/Barber/img/gallery/g9.jpeg"
+          />
+          <img
+            src="https://lodegal.github.io/portfolio/projects/Barber/img/gallery/g10.jpeg"
+          />
+        </div>
+      </div>
+      <div class="portfolio__container-fixed">
+        <div class="portfolio__container-slider-image">
+          <div class="portfolio__container-control-menu">
+            <div id="left-chevron-portfolio" class="portfolio__icon-chevron">
+              <i class="fas fa-chevron-left"></i>
+            </div>
+            <div id="right-chevron-portfolio" class="portfolio__icon-chevron">
+              <i class="fas fa-chevron-right"></i>
+            </div>
+          </div>
+          <div class="portfolio__slider-wrapper-container">
+            <div class="portfolio__slider-container">
+              <img
+                src="https://lodegal.github.io/portfolio/projects/Barber/img/gallery/g10.jpeg"
+              />
+              <img
+                src="https://lodegal.github.io/portfolio/projects/Barber/img/gallery/g1.jpg"
+              />
+              <img
+                src="https://lodegal.github.io/portfolio/projects/Barber/img/gallery/g2.jpg"
+              />
+              <img
+                src="https://lodegal.github.io/portfolio/projects/Barber/img/gallery/g3.jpg"
+              />
+              <img
+                src="https://lodegal.github.io/portfolio/projects/Barber/img/gallery/g4.jpeg"
+              />
+              <img
+                src="https://lodegal.github.io/portfolio/projects/Barber/img/gallery/g5.jpeg"
+              />
+              <img
+                src="https://lodegal.github.io/portfolio/projects/Barber/img/gallery/g6.jpg"
+              />
+              <img
+                src="https://lodegal.github.io/portfolio/projects/Barber/img/gallery/g7.jpeg"
+              />
+              <img
+                src="https://lodegal.github.io/portfolio/projects/Barber/img/gallery/g8.jpeg"
+              />
+              <img
+                src="https://lodegal.github.io/portfolio/projects/Barber/img/gallery/g9.jpeg"
+              />
+              <img
+                src="https://lodegal.github.io/portfolio/projects/Barber/img/gallery/g10.jpeg"
+              />
+              <img
+                src="https://lodegal.github.io/portfolio/projects/Barber/img/gallery/g1.jpg"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="prices" class="section-pricing">
+      <div class="about-us__title">OUR PRICING</div>
+      <div class="about-us__section-icon"></div>
+      <p class="about-us__text-introduction">
+        We specialize in working not only with men, but also with women. Here
+        you can see the prices for our services.
+      </p>
+      <div class="prices__container">
+        <div class="prices__wrapper">
+          <div class="prices__title--black">MAN</div>
+          <ul class="prices__list-price">
+            <li class="prices__price-item">
+              Hair cut
+              <span>16$</span>
+            </li>
+            <li class="prices__price-item">Hair wash <span>12$</span></li>
+            <li class="prices__price-item">Hair styling <span>16$</span></li>
+            <li class="prices__price-item">Face shave <span>16$</span></li>
+            <li class="prices__price-item">Face shave <span>16$</span></li>
+            <li class="prices__price-item">Face shave <span>16$</span></li>
+          </ul>
+          <div class="prices__title--brown">APPOINTMENT</div>
+        </div>
+        <div class="prices__wrapper">
+          <div class="prices__title--brown">WOMAN</div>
+          <ul class="prices__list-price">
+            <li class="prices__price-item">
+              Hair cut
+              <span>20$</span>
+            </li>
+            <li class="prices__price-item">
+              Hair cut
+              <span>16$</span>
+            </li>
+            <li class="prices__price-item">
+              Hair cut
+              <span>16$</span>
+            </li>
+            <li class="prices__price-item">
+              Hair cut
+              <span>16$</span>
+            </li>
+            <li class="prices__price-item">
+              Hair cut
+              <span>16$</span>
+            </li>
+            <li class="prices__price-item">
+              Hair cut
+              <span>16$</span>
+            </li>
+          </ul>
+          <div class="prices__title--black">APPOINTMENT</div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer" id="contacts">
+      <div class="footer__wrapper-contact">
+        <div class="footer__wrapper-contact-child">
+          <div class="footer__contact-item footer__width-subscribe">
+            <h3 class="footer__title">SUBSCRIBE</h3>
+            <div>Subscribe to us, to be informed of all the news.</div>
+            <form class="footer__form" action="">
+              <input
+                class="footer__email-input"
+                type="text"
+                placeholder="Your E-mail"
+                required
+              />
+              <button class="footer__button-submit">
+                <i class="fas fa-paper-plane"></i>
+              </button>
+            </form>
+          </div>
+          <div class="footer__contact-item">
+            <h3 class="footer__title footer__title--center">WORKING HOURS</h3>
+            <ul>
+              <li>
+                MON
+                <span>9.00 - 18.00</span>
+              </li>
+              <li>
+                TUE
+                <span>9.00 - 18.00</span>
+              </li>
+              <li>
+                THU
+                <span>9.00 - 18.00</span>
+              </li>
+              <li>
+                FRI
+                <span>9.00 - 18.00</span>
+              </li>
+              <li>
+                SAT
+                <span>9.00 - 18.00</span>
+              </li>
+              <li>
+                SUN
+                <span>OUTPUT</span>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__contact-item footer__width-large">
+            <h3 class="footer__title footer__title--end">LATEST FROM BLOG</h3>
+            <div class="footer__color-title">Lorem ipsum dolor</div>
+            <p>
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+              accusantium doloremque laudantium...
+            </p>
+            <div class="footer__color-title">Lorem ipsum dolor</div>
+            <p>
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+              accusantium doloremque laudantium...
+            </p>
+          </div>
+          <div class="footer__contact-item footer__width-larger">
+            <h3 class="footer__title footer__title--end">INSTAGRAM</h3>
+            <div class="footer__instagram-container">
+              <a
+                class="footer__instagram-item"
+                href="https://www.instagram.com/"
+              >
+                <img
+                  src="https://lodegal.github.io/portfolio/projects/Barber/img/instagram/instagram-1.jpg"
+                />
+              </a>
+              <a
+                class="footer__instagram-item"
+                href="https://www.instagram.com/"
+              >
+                <img
+                  src="https://lodegal.github.io/portfolio/projects/Barber/img/instagram/instagram-2.jpg"
+                />
+              </a>
+              <a
+                class="footer__instagram-item"
+                href="https://www.instagram.com/"
+              >
+                <img
+                  src="https://lodegal.github.io/portfolio/projects/Barber/img/instagram/instagram-3.jpg"
+                />
+              </a>
+              <a
+                class="footer__instagram-item"
+                href="https://www.instagram.com/"
+              >
+                <img
+                  src="https://lodegal.github.io/portfolio/projects/Barber/img/instagram/instagram-4.jpg"
+                />
+              </a>
+              <a
+                class="footer__instagram-item"
+                href="https://www.instagram.com/"
+              >
+                <img
+                  src="https://lodegal.github.io/portfolio/projects/Barber/img/instagram/instagram-5.jpg"
+                />
+              </a>
+              <a
+                class="footer__instagram-item"
+                href="https://www.instagram.com/"
+              >
+                <img
+                  src="https://lodegal.github.io/portfolio/projects/Barber/img/instagram/instagram-6.jpg"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,1590 @@
+body{
+  margin: 0;
+  padding: 0;
+  text-rendering: optimizeLegibility;
+  width: 100%;
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #343a40;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Quattrocento Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+.image-1{
+  background-image: url(https://lodegal.github.io/portfolio/projects/Barber/img/main-slider/wel-sl-1.jpg);
+  background-size: cover;
+  background-position: top;
+  height: 100vh;  
+  background-repeat: no-repeat;
+}
+
+.image-2{
+  background-image: url(https://lodegal.github.io/portfolio/projects/Barber/img/main-slider/wel-sl-2.jpeg);
+  background-size: cover;
+  background-position: top;
+  height: 100vh;
+  background-repeat: no-repeat;
+}
+
+.header1{
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #995437;
+  width: 100%;
+  z-index: 10;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+}
+
+.header1__logo{
+  margin-left: 3rem;
+}
+
+.menu-toggle{
+  padding: 5px 0;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  margin-right: 3rem;
+}
+
+.one, .two, .three {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  width: 100%;
+  height: 2px;
+  margin-top: 7px;
+  background-color: #fff;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.menu-toggle.on .one {
+  -webkit-transform: rotate(45deg) translate(7px, 6px);
+  -ms-transform: rotate(45deg) translate(7px, 6px);
+  transform: rotate(45deg) translate(7px, 6px);
+}
+
+.menu-toggle.on .two{
+  opacity: 0;
+}
+
+.menu-toggle.on .three {
+  -webkit-transform: rotate(-45deg) translate(7px, -6px);
+  -ms-transform: rotate(-45deg) translate(7px, -6px);
+  transform: rotate(-45deg) translate(7px, -6px);
+}
+
+.mobile-navigation{
+  position: fixed;
+  z-index: 9;
+  height: 100%;
+  top: 50px;
+  color: white;
+  width: 240px;
+  right: -100%;
+  transition: 1s;
+  background-color: #884d34;
+  overflow-y: auto;
+  padding-bottom: 10rem;
+  height: 80%;
+}
+
+.overlay{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #343a408f;
+  z-index: 2;
+  display: none;
+}
+
+.mobile-navigation-active{
+  right: 0;
+}
+
+.mobile-navigation__link{
+  color: white;
+  padding: 1rem;
+  text-transform: uppercase;
+  display: block;
+}
+
+.mobile-navigation a{
+  text-decoration: none;
+}
+
+.mobile-navigation__link-active{
+  background-color: #aaaaaa;
+}
+
+.container-mobile-contacts{
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  line-height: 2.2rem;
+}
+
+.container-mobile-contacts p{
+  margin: 0;
+}
+
+.inner-mobile-contacts{
+  display: flex;
+  align-items: center;
+  color: white;
+  margin: 0.6rem 0;
+}
+
+.inner-mobile-contacts div{
+  margin-right: 0.5rem;
+}
+
+.contact-text{
+  margin-left: 1rem;
+}
+
+.mobile-navigation__container-search{
+  position: relative;
+  display: inline-block;
+}
+
+.mobile-navigation__container-search input{
+  background-color: transparent;
+  margin-left: 1rem;
+  border-right: none;
+  color: white;
+  outline: none;
+  border-top: none;
+  border-left: none;
+}
+
+.mobile-navigation__container-search input:valid + label,
+.mobile-navigation__container-search input:focus + label{
+  opacity: 0;
+}
+
+.mobile-navigation__container-search label{
+  position: absolute;
+  top: 0;
+  left: 30px;
+  opacity: 1;
+  transition: 0.5s;
+  color: white;
+  pointer-events: none;
+}
+
+.mobile-navigation__container-search i{
+  position: absolute;
+  left: 100%;
+}
+
+/* Header */
+.header{
+  height: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  z-index: 10;
+}
+
+.header__container-address-info{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  margin: auto;
+  padding: 2rem 0;
+}
+
+.header__wrapper-container-address{
+  background-color: white;
+  transition: 0.5s;
+}
+
+.header__block-child-information{
+  display: flex;
+  align-items: center;
+  font-weight: bolder;
+}
+
+.header__conatiner-search-input{
+  position: relative;
+  border-bottom: 1px solid black;
+  padding-bottom: 0.4rem;
+}
+
+.header__conatiner-search-input .fa-search{
+  position: absolute;
+  top:0;
+  font-size: 1rem;
+  left: 100%;
+}
+
+.header__conatiner-search-input label{
+  position: absolute;
+  top:0;
+  left: 0;
+  opacity: 1;
+  transition: 0.3s;
+  pointer-events: none;
+}
+
+.header__conatiner-search-input input{
+  outline: none;
+  border: none;
+}
+
+.header__conatiner-search-input input:valid + label,
+.header__conatiner-search-input input:focus + label{
+  opacity: 0;
+}
+
+.header__block-child-information .fas,
+.header__block-child-information .far{
+  color: #985336;
+  font-size: 1.3rem;
+  margin-right: 1rem;
+}
+
+.header__block-child-information p{
+  margin: 0;
+  line-height: 1.5;
+  color: #343a40;
+}
+
+.header__logo{
+  color: #985336;
+  font-weight: 700;
+  font-size: 1.875rem;
+}
+/* nav bar list */
+.header__nav-bar-container{
+  width: 100%;
+  transition: 0.5s;
+  position: fixed;
+  background-color: #343a404b;
+}
+
+.header__nav-bar-list a{
+  text-decoration: none;
+}
+
+.header__nav-bar-list{
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  height: 90px;
+  margin: auto;
+  top:100%;
+}
+
+.header__nav-bar-container li{
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  height: 100%;
+  text-transform: uppercase;
+  font-size: 1.25rem;
+  color:white
+}
+
+.header__nav-item-active{
+  background-color: #98533665;
+}
+
+/* slider */
+.main-slider{
+  width: 100%;
+  overflow: hidden;
+}
+
+.main-slider__slide-list{
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  position: relative;
+}
+
+.main-slider__slide-item-wrapper--absolute{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.main-slider__slide-list .active{
+  opacity: 0!important;
+}
+
+.main-slider__slide-item{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  opacity: 1;
+  transition: 2s;
+}
+
+/* .main-slider__slide-item img{
+  width: 100%;
+  height: 100%;
+  object-fit:cover;
+  object-position: center;
+} */
+
+.main-slider__block-title{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: fit-content;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  font-family: "Vani";
+  font-size: 4.5rem;
+  font-weight: 700;
+  color: white;
+  padding-top: 11rem;
+  text-transform: uppercase;
+  padding-left: 10rem;
+}
+
+.main-slider__block-title span{
+  width: fit-content;
+  display: inline-block;
+}
+
+.main-slider__main-title{
+  color: #985336;
+}
+
+.main-slider__block-title a{
+  text-decoration: none;
+  margin-top: 6rem;
+  font-weight: 300;
+  z-index: 2;
+  padding: 1rem;
+  border: 1px solid #985336;
+  display: inline-block;
+  font-size: 2rem;
+  width: fit-content;
+  transition: 0.3s;
+  color: #985336;
+}
+
+.main-slider__block-title a:hover{
+  background-color: #985336;
+  color:white
+}
+
+/* ` */
+.about-us{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 8rem;
+}
+
+.about-us__title{
+  font-size: 2.25rem;
+  z-index: 1;
+  text-align: center;
+  font-family: "Vani";
+}
+
+.about-us__section-icon{
+  margin-top: 1rem;
+  background-image: url("https://lodegal.github.io/portfolio/projects/Barber/img/svg/hair-style-badge-with-a-mustache.svg");
+  background-position: center;
+  background-size: contain;
+  width: 70px;
+  position: relative;
+  z-index: 1;
+  height: 70px;
+}
+
+.about-us__section-icon::before{
+  content: "";
+  width: 100px;
+  position: absolute;
+  height: 1px;
+  top: 50%;
+  left: 120%;
+  border-bottom: 1px solid #995437;
+}
+
+.about-us__section-icon::after{
+  content: "";
+  width: 100px;
+  position: absolute;
+  height: 1px;
+  top: 50%;
+  right: 120%;
+  border-bottom: 1px solid #995437;
+}
+
+.about-us__text-introduction{
+  text-align: center;
+  font-weight: 400;
+  font-size: 1.25rem;
+  width: 650px;
+  z-index: 1;
+}
+
+.about-us__why-us-list{
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  margin-top: 5rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.about-us__why-us-item{
+  background-color: #F0F0F0;
+  text-align: center;
+  display: flex;
+  width: 30%;
+  margin-right: 1rem;
+  padding-bottom: 9rem;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid rgba(128, 128, 128, 0.329);
+  justify-content: flex-start;
+}
+
+.about-us__why-us-inner-item{
+  padding:0 2rem;
+  position: relative;
+  bottom: 60px;
+}
+
+.about-us__title-why-us::after{
+  width: 50%;
+  content: "";
+  display:block;
+  clear: both;
+  background-color: #995437;
+  border: 0.4px solid #995437;
+  margin:auto;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.about-us__icon-circle{
+  border-radius: 50%;
+  border: 2px solid #995437;
+  display: inline-block;
+  width: fit-content;
+  background-color: white;
+  padding: 0.2rem;
+}
+
+.about-us__about-form-text{
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #343a40;
+}
+
+.about-us__icon-circle img{
+  object-fit: contain;
+  width: 60px;
+  padding: 1rem;
+  height: 60px;
+}
+
+/* section-advantage */
+
+.section-advantage{
+  background-image: url(https://lodegal.github.io/portfolio/projects/Barber/img/avantages-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  margin-top:6rem;
+  z-index: -1;
+  height: 233.6px;
+  position: relative;
+}
+
+.section-advantage-wrapper{
+  display: flex;
+  width:1000px;
+  z-index: 1;
+  flex-wrap: wrap;
+  padding: 2rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.section-advantage::before{
+  width: 100%;
+  content:"";
+  height: 100%;
+  background-color: #272727c4;
+  position: absolute;
+}
+
+.section-advantage__item-info{
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 1000;
+  font-family: "Vani";
+}
+.section-advantage__item-info span{
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+}
+
+.section-advantage__title-number{
+  text-align: center;
+  font-weight: 700;
+  font-size: 3.75rem;
+  color: #985336;
+  margin: 0.4rem;
+}
+
+/* our service */
+
+.our-service{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 5rem;
+}
+
+.our-service__container-service-display{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.678);
+}
+
+.our-service__container-service-display .our-service__background{
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  left: 0;
+  height: 130%;
+  object-fit: cover;
+  width:100%;
+  height: 100%;
+}
+
+.our-service__background-client-image{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  z-index: 1;
+}
+
+.our-service__background-client-image img{
+  height: fit-content;
+  width: fit-content;
+}
+
+.our-service__container-service-list{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0;
+  width: 90%;
+  margin-top: 9rem;
+  position: absolute;
+  margin-left: 2.5rem;
+  top:0;
+  left: 0;
+  flex-wrap: wrap;
+}
+
+.our-service__container-service-item{
+  display: flex;
+  width: 34%;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.our-service__container-service-list .left{
+  /* margin: 2rem 15.5rem 2rem 0; */
+  margin-top: 2rem;
+  flex-direction: row-reverse;
+}
+
+.our-service__container-service-list .right{
+  /* margin: 2rem 0 2rem 15.5rem; */
+  margin-top: 2rem;
+}
+
+.our-service__container-service-list .align-left{
+  text-align: start;
+}
+.our-service__container-service-list .align-right{
+  text-align: end;
+}
+
+.our-service__icon{
+  border-radius: 50%;
+  padding: 1.4rem;
+  display: flex;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  justify-self: center;
+  border: 1px solid #985336;
+  margin: 2rem 1rem;
+}
+
+.our-service__icon img{
+  width: 100%;
+  height: 100%;
+}
+
+.our-service__text-description{
+  width: 70%;
+}
+
+.our-service__container-service-list{
+  list-style-type: none;
+}
+
+/* make an appointment */
+
+.text-white-50{
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.make-an-appointment{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url(https://lodegal.github.io/portfolio/projects/Barber/img/appointmen-bg.jpg);
+  background-size: contain;
+  color: white;
+  padding-top: 10rem;
+  position: relative;
+}
+
+.make-an-appointment::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0000008e;
+}
+
+/* form data */
+
+.make-an-appointment__form-data{
+  padding-bottom: 5rem;
+  display: flex;
+  width: 710px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.make-an-appointment__form-data .date-picker input{
+  color: transparent;
+  width: 285px;
+  position: relative;
+}
+
+.make-an-appointment__form-data .date-picker input::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
+
+.make-an-appointment__form-data .date-picker input:valid,
+.make-an-appointment__form-data .date-picker input:focus{
+  color: white;
+}
+
+.select2-container{
+  padding-right: 0!important;
+  padding-left: 0!important;
+  width: 300px;
+}
+
+.make-an-appointment__container-inner-elem{
+  padding: 0 0.4rem;
+  padding-top: 1.5rem;
+  margin: 1rem 0;
+  display: flex;
+  align-items: center;
+  position: relative;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.make-an-appointment__form-data .m-right{
+  margin-right:2rem;
+}
+
+.make-an-appointment__form-data .m-left{
+  margin-left: 2rem;
+}
+
+.make-an-appointment__container-inner-elem label{
+  position: absolute;
+  top: 20px;
+  transition: 0.3s;
+  left: 8px;
+  pointer-events: none;
+  color: #aaaaaa;
+}
+
+.make-an-appointment__input{
+  outline: none;
+  font-size: 1rem;
+  width: 300px;
+  border: none;
+  background-color: transparent;
+  color: white;
+}
+
+.make-an-appointment__input:focus +label,
+.make-an-appointment__input:valid +label{
+  top: 0;
+  font-size: smaller;
+}
+
+.make-an-appointment__select2{
+  background-color: transparent;
+  width: 100%;
+  color: white;
+  border: none;
+  position: relative;
+  top: 1px;
+  font-size: 1rem;
+  outline: none;
+}
+
+.make-an-appointment__select2 option{
+  color: black;
+  font-size: 1.5rem;
+}
+
+.make-an-appointment__select2 option:hover{
+  background-color: #985336!important;
+  color: white!important;
+}
+
+.option-hidden-default{
+  display: none;
+}
+
+.make-an-appointment__select2:valid + label{
+  top: 0;
+  font-size: 1rem;
+}
+
+.make-an-appointment__textarea{
+  width: 674px;
+  resize: none;
+  outline: none;
+  color: white;
+  border-bottom: 1px solid white;
+  border: none;
+  background-color: transparent;
+  height: 100px;
+  margin-top: 2rem;
+}
+
+.make-an-appointment__container-textarea{
+  border-bottom: 1px solid white;
+  position: relative;
+}
+
+.make-an-appointment__container-textarea label{
+  position: absolute;
+  transition: 0.3s;
+  color: #aaaaaa;
+  top: 28px;
+  left: 0;
+}
+
+.make-an-appointment__textarea:valid +label,
+.make-an-appointment__textarea:focus +label{
+  top: 0;
+  font-size: smaller;
+}
+
+.make-an-appointment__container-link{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+.make-an-appointment__container-link button{
+  text-decoration: none;
+  color: #985336;
+  z-index: 1;
+  font-weight: 500;
+  background-color: transparent;
+  padding: 1rem;
+  border:1px solid #985336;
+  font-size: 1.6rem;
+  transition: 0.4s;
+}
+
+.make-an-appointment__container-link button:hover{
+  background-color: #985336;
+  color: white;
+}
+
+/* our-barbers */
+
+.our-barbers{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 7rem;
+  padding-bottom: 12rem;
+}
+
+.our-barbers__list-card-barber{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 600px;
+  flex-wrap: wrap;
+}
+
+.our-barbers__card-barber-item{
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 0.6rem;
+}
+
+.our-barbers__card-barber-item h2{
+  font-family: "Vani";
+  display: block;
+  font-size: 2rem;
+}
+
+.our-barbers__image-barber{
+  height: 400px;
+  display: flex;
+  align-items: center;
+}
+
+.our-barbers__image-barber img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.barber-rating{
+  display: flex;
+  list-style-type: none;
+  margin: 1.5rem 0;
+  padding: 0;
+  color: #985336;
+}
+
+.barber-rating .far{
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.barber-rating li{
+  margin: 0.4rem;
+}
+
+/* testimonials */
+
+.testimonials{
+  position: relative;
+  height: 800px;
+}
+
+.testimonials::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000af;
+}
+
+.testimonials__our-clients-container{
+  display: flex;
+  padding-top: 8rem;
+  position: absolute;
+  top: 0;
+  color: white;
+  left: 0;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+
+.testimonials__image-container{
+  height: 100%;
+}
+
+.testimonials__image-container img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.testimonials__container-slider-parent{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+}
+
+.testimonials__wrapper-slider-container{
+  width: 53%;
+  margin: 0 1rem;
+  overflow: hidden;
+}
+
+.testimonials__icon-chevron{
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  margin: 1rem;
+  justify-content: center;
+  color: #985336;
+  cursor: pointer;
+  border: 1px solid #985336;
+}
+
+.testimonials__icon-chevron:hover{
+  background-color: #985336;
+  color: black;
+}
+
+.testimonials__icon-chevron i{
+  font-size: 2rem;
+}
+
+.testimonials__slider-container{
+  display: flex;
+  cursor: grab;
+  white-space: nowrap;
+}
+
+.testimonials__page-list{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.testimonials__page-item{
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 0.4rem;
+  background-color: #000000;
+}
+
+.testimonials__page-list .active{
+  background-color:#884d34;
+}
+
+
+.testimonials__slide-item{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+}
+.testimonials__slide-item p{
+  white-space: normal;
+  margin-bottom: 3rem;
+}
+
+.testimonials__slide-item img{
+  width: 100px;
+  height: 100px;
+  margin:  1.2rem 0;
+  border-radius: 50%;
+}
+
+.review-name{
+  font-family: "Vani";
+  font-size: larger;
+}
+
+/* portfolio */
+
+.portfolio__container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 6rem;
+}
+
+.portfolio__gallery-container{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.portfolio__gallery-container img{
+  width: 20%;
+  height: 300px;
+  object-fit: cover;
+  filter: grayscale(100%);
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.portfolio__gallery-container img:hover{
+  filter: none;
+}
+
+.portfolio__slider-wrapper-container{
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.portfolio__slider-container{
+  width: 10000%;
+  height: 100%;
+  transition: 0.5s;
+  white-space: nowrap;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.portfolio__slider-container img{
+  width: 100%;
+  display: block;
+  height: 100%;
+  object-fit: contain;
+}
+
+.portfolio__icon-chevron{
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 3px solid #985336;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #985336;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.portfolio__container-fixed{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  opacity: 0;
+  z-index: -2;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.733);
+  top: 0;
+  left: 0;
+  transition: 0.5s;
+}
+
+.portfolio__icon-chevron:hover{
+  color: white;
+}
+
+.portfolio__container-slider-image{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+  position: relative;
+}
+
+.portfolio__container-control-menu{
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  left: 0;
+  z-index: 2;
+}
+
+/* section-pricing */
+
+.section-pricing{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 6rem;
+  background-color: #E9ECEF;
+  padding-bottom: 5rem;
+}
+
+.prices__container{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.prices__wrapper{
+  margin:1rem;
+  width: 350px;
+}
+
+.prices__list-price{
+  list-style-type: none;
+  padding: 0;
+  border: 1px solid grey;
+  margin: 0;
+  background-color: white;
+  padding: 1.5rem 1rem;
+}
+
+.prices__price-item{
+  display:flex;
+  padding: 7px 0;
+  justify-content: space-between;
+}
+
+.prices__title--black{
+  background-color: black;
+  color: white;
+  padding: 1.2rem 1rem;
+  text-align: center;
+}
+
+.prices__title--brown{
+  background-color: #985336;
+  padding: 1.2rem 1rem;
+  color: white;
+  text-align: center;
+}
+
+footer{
+  display: flex;
+  background-image: url(https://lodegal.github.io/portfolio/projects/Barber/img/footer-bg.jpg);
+  background-size: cover;
+  position: relative;
+}
+
+.footer__wrapper-contact{
+  width: 100%;
+  height: 100%;
+  padding-top: 9rem;
+  padding-bottom: 10rem;
+  background-color: rgba(0, 0, 0, 0.801);
+  color:rgba(255, 255, 255, 0.5) !important
+}
+
+.footer__wrapper-contact-child{
+  display: flex;
+  justify-content: center;
+  width: 1200px;
+  margin: auto;
+}
+
+.footer__title{
+  color: #985336;
+  margin-bottom: 3rem;
+}
+
+.footer__color-title{
+  color: #985336;
+}
+
+.footer__contact-item{
+  margin: 1.5rem;
+  width: 25%;
+}
+
+.footer__contact-item li{
+  line-height: 2.4rem;
+}
+
+.footer__width-large{
+  width: 25%;
+  word-break: break-all;
+}
+
+.footer__width-larger{
+  width: 300px;
+}
+
+.footer__width-subscribe{
+  width: 270px;
+}
+
+.footer__contact-item ul{
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer__contact-item ul li{
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__title--center{
+  text-align: center;
+}
+
+.footer__title--end{
+  text-align: end;
+}
+
+.footer__form{
+  display: flex;
+  margin-top: 3rem;
+  width: 100%;
+}
+
+.footer__email-input{
+  padding: 1rem;
+  width: 100%;
+  outline: none;
+}
+
+.footer__button-submit{
+  padding: 1rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  background-color: #985336;
+  color: white;
+  outline: none;
+  border: none;
+  transition: 0.4s;
+}
+
+.footer__button-submit:hover{
+  color: #343a40;
+}
+
+.footer__instagram-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.footer__instagram-item{
+  width: 70px;
+  height: 70px;
+  margin: 0.4rem;
+}
+
+.footer__instagram-item img{
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+@media(max-width:1350px){
+  .our-service__background-client-image{
+    display: none;
+  }
+
+  .our-service__container-service-list{
+    justify-content: center;
+    align-items: flex-start;
+    height: 100%;
+    margin-top: 1rem;
+  }
+
+  .our-service__container-service-display{
+    height: 800px;
+  }
+
+  .our-service__container-service-item{
+    width: 40%;
+  }
+
+}
+
+@media(max-width:980px){
+  .our-service__container-service-item{
+    margin: 0 1rem;
+    width: 45%;
+  }
+}
+
+@media(max-width:788px){
+  .our-service__container-service-list{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin: 0;
+    width: 100%;
+  }
+
+  .our-service__container-service-list li {
+    width: 100%;
+  }
+
+  .our-service__container-service-display{
+    height: 900px;
+  }
+
+  .our-service__container-service-item{
+    margin: 0;
+  }
+}
+
+@media(max-width:997px){
+  .about-us__why-us-item{
+    width: 40%;
+  }
+  
+  .width-cover{
+    width: 82%;
+    margin-top: 1rem;
+  }
+}
+@media(max-width:766px){
+  .about-us__why-us-item{
+    width: 80%;
+    margin: auto;
+    margin-top: 1rem;
+  }
+  
+  .width-cover{
+    width: 80%;
+  }
+}
+
+@media(max-width:772px){
+  .make-an-appointment__form-data{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+  }
+
+  .portfolio__icon-chevron{
+    width: 35px;
+    height: 35px;
+    font-size: smaller;
+  }
+
+  .portfolio__slider-wrapper-container{
+    height: 300px;
+  }
+
+  .about-us__text-introduction{
+    display: block;
+    width: 100%;
+  }
+
+  .make-an-appointment__container-inner-elem {
+    width: 100%;
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .make-an-appointment__textarea{
+    width: 100%;
+  }
+
+  .make-an-appointment__form-data .m-left {
+    margin-left: 0;
+  }
+
+  .make-an-appointment__form-data .m-right {
+    margin-right: 0;
+  }
+
+  .make-an-appointment__container-inner-elem input{
+    width: 100%;
+  }
+
+  .make-an-appointment__form-data .date-picker input {
+    width: 100%;
+  }
+
+  .make-an-appointment__form-data .date-picker label{
+    top: 10px;
+  }
+
+  .make-an-appointment__container-textarea{
+    width: 100%;
+  }
+}
+
+@media(max-width:1216px){
+  .footer__wrapper-contact-child {
+    display: flex;
+    justify-content: center;
+    width: 1000px;
+    margin: auto;
+  }
+
+  .footer__title--end{
+    text-align: center;
+    word-wrap: break-word;
+    word-break: normal;
+  }
+}
+
+@media(max-width:1000px){
+  .our-barbers {
+    height: 1300px;
+  }
+
+  .portfolio__gallery-container img{
+    width: 33.333333%; /* 1/3 */
+  }
+
+  .portfolio__gallery-container img{
+    width: 25%; /* 1/4 */
+  }
+
+  .footer__wrapper-contact-child{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .footer__contact-item{
+    width: 70%;
+    margin: auto;
+  }
+
+  .footer__instagram-container{
+    justify-content: center;
+  }
+}
+
+@media(max-width:655px){
+  .portfolio__gallery-container img{
+    width: 50%!important; /* 1/2 */
+  }
+
+  .our-barbers {
+    height: 1200px;
+  }
+
+  .our-barbers__image-barber{
+    height: 330px;
+  }
+
+  .section-advantage__item-info{
+    width: 40%;
+  }
+
+  .testimonials__wrapper-slider-container {
+    width: 90%;
+  }
+  .section-advantage{
+    height: 400px;
+  }
+
+  .our-barbers{
+    padding-bottom: 3rem;
+  }
+
+  .our-barbers__list-card-barber{
+    margin-top: 3rem;
+  }
+
+  .our-barbers__card-barber-item{
+    width: 48%;
+    margin: 0.2rem;
+  }
+
+  .our-barbers__card-barber-item h2{
+    font-size: large;
+  }
+
+  .our-barbers__card-barber-item .barber-rating{
+    font-size: 0.6rem;
+    margin-top: 0;
+  }
+
+  .our-barbers__card-barber-item .far{
+    font-size: 0.6rem!important;
+  }
+
+  .barber-rating-item .far{
+    font-size: 1rem;
+  }
+
+  .testimonials {
+    height: 1000px;
+  }
+
+  .our-service__container-service-display{
+    height: 1200px;
+  }
+
+  .testimonials__icon-chevron{
+    display: none;
+  }
+}
+
+@media(max-width:1112px){
+  .portfolio__gallery-container img{
+    width: 25%; /* 1/4 */
+  }
+
+  .main-slider__block-title{
+    font-size: 2rem;
+    padding-left: 1rem;
+  }
+
+  .main-slider__block-title a {
+    font-size: 1rem;
+  }
+}
+
+@media(max-width:780px){
+
+  .portfolio__gallery-container img{
+    width: 33.333333%; /* 1/3 */
+  }
+
+  .prices__container{
+    flex-direction: column;
+  }
+
+  .prices__wrapper{
+    width: 90%;
+  }
+}
