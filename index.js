@@ -42,6 +42,9 @@ window.addEventListener("resize", () => {
   if (window.innerWidth < 1250) {
     $(".header").style.display = "none";
     $(".header1").style.display = "flex";
+    if ($(".menu-toggle"))
+      $(".menu-toggle").removeEventListener("click", handleMenuToggle);
+    handleHeader();
   } else {
     $(".header").style.display = "block";
     $(".mobile-navigation").className = "mobile-navigation";
@@ -60,25 +63,28 @@ function handleHeader() {
       $(".mobile-navigation").className = "mobile-navigation";
       $(".overlay").style.display = "none";
     });
-    $(".menu-toggle").addEventListener("click", (e) => {
-      if ($(".menu-toggle").className === "menu-toggle") {
-        $(".overlay").style.display = "block";
-        $(".menu-toggle").className = "menu-toggle on";
-        $(".mobile-navigation").className =
-          "mobile-navigation mobile-navigation-active";
-      } else {
-        $(".overlay").style.display = "none";
-        $(".menu-toggle").className = "menu-toggle";
-        $(".mobile-navigation").className = "mobile-navigation";
-      }
-    });
   } else {
     $(".header").style.display = "block";
     $(".header1").style.display = "none";
   }
+  if ($(".menu-toggle"))
+    $(".menu-toggle").addEventListener("click", handleMenuToggle);
 }
 
 let modePortfolioDragging = null;
+function handleMenuToggle() {
+  if ($(".menu-toggle").className === "menu-toggle") {
+    $(".overlay").style.display = "block";
+    $(".menu-toggle").className = "menu-toggle on";
+    $(".mobile-navigation").className =
+      "mobile-navigation mobile-navigation-active";
+  } else {
+    $(".overlay").style.display = "none";
+    $(".menu-toggle").className = "menu-toggle";
+    $(".mobile-navigation").className = "mobile-navigation";
+  }
+}
+
 function handleUserChangeSlidePortfolio() {
   const sliderWrapper = $(".portfolio__slider-wrapper-container");
   const sliderContainer = $(".portfolio__slider-container");
@@ -595,7 +601,6 @@ function mainSliderChangeSlideDragging() {
       posX1 = e.touches[0].clientX;
     }
   });
-
 
   document.addEventListener("mouseup", () => {
     if (Math.abs(delta) > 100) {

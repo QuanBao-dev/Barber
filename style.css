@@ -454,7 +454,7 @@ html{
   list-style-type: none;
   padding: 0;
   margin: 0;
-  width: 100%;
+  width: 85%;
   margin-top: 5rem;
   display: flex;
   justify-content: center;
@@ -924,7 +924,7 @@ html{
 
 .testimonials{
   position: relative;
-  height: 800px;
+  height: 860px;
 }
 
 .testimonials::before{
@@ -1024,6 +1024,7 @@ html{
   flex-direction: column;
   align-items: center;
   width: 100%;
+  margin: 1rem;
   text-align: center;
 }
 .testimonials__slide-item p{
@@ -1338,7 +1339,24 @@ footer{
     width: 40%;
   }
 
+  
 }
+
+@media(max-width:1112px){
+  .portfolio__gallery-container img{
+    width: 25%; /* 1/4 */
+  }
+
+  .main-slider__block-title{
+    font-size: 4rem;
+    padding-left: 1rem;
+  }
+
+  .main-slider__block-title a {
+    font-size: 1rem;
+  }
+}
+
 
 @media(max-width:980px){
   .our-service__container-service-item{
@@ -1378,6 +1396,12 @@ footer{
     width: 82%;
     margin-top: 1rem;
   }
+
+  .main-slider__block-title{
+    font-size: 3.5rem;
+    padding-left: 1rem;
+  }
+
 }
 @media(max-width:766px){
   .about-us__why-us-item{
@@ -1388,6 +1412,11 @@ footer{
   
   .width-cover{
     width: 80%;
+  }
+
+  .main-slider__block-title{
+    font-size: 3rem;
+    padding-left: 1rem;
   }
 }
 
@@ -1445,6 +1474,10 @@ footer{
 
   .make-an-appointment__container-textarea{
     width: 100%;
+  }
+
+  .testimonials{
+    height: 1000px;
   }
 }
 
@@ -1557,20 +1590,17 @@ footer{
   .testimonials__icon-chevron{
     display: none;
   }
+
+  .main-slider__block-title{
+    font-size: 2.8rem;
+    padding-left: 1rem;
+  }
 }
 
-@media(max-width:1112px){
-  .portfolio__gallery-container img{
-    width: 25%; /* 1/4 */
-  }
-
+@media(max-width:400px){
   .main-slider__block-title{
     font-size: 2rem;
     padding-left: 1rem;
-  }
-
-  .main-slider__block-title a {
-    font-size: 1rem;
   }
 }
 
