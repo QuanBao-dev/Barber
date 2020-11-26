@@ -50,6 +50,7 @@ window.addEventListener("resize", () => {
     $(".mobile-navigation").className = "mobile-navigation";
     $(".menu-toggle").className = "menu-toggle";
     $(".header1").style.display = "none";
+    $(".overlay").style.display = "none";
   }
 });
 

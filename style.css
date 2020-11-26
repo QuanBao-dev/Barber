@@ -1388,6 +1388,9 @@ footer{
 }
 
 @media(max-width:997px){
+  .about-us__why-us-list{
+    width: 100%;
+  }
   .about-us__why-us-item{
     width: 40%;
   }
@@ -1405,13 +1408,13 @@ footer{
 }
 @media(max-width:766px){
   .about-us__why-us-item{
-    width: 80%;
+    width: 90%;
     margin: auto;
     margin-top: 1rem;
   }
   
   .width-cover{
-    width: 80%;
+    width: 90%;
   }
 
   .main-slider__block-title{
