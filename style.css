@@ -1081,7 +1081,6 @@ html{
 }
 
 .portfolio__slider-container{
-  width: 10000%;
   height: 100%;
   transition: 0.5s;
   white-space: nowrap;
@@ -1090,10 +1089,19 @@ html{
   align-items: flex-start;
 }
 
+.portfolio__slider-item{
+  height: 100%;
+  width: 1536px;
+  position: relative;
+}
+
 .portfolio__slider-container img{
   width: 100%;
   display: block;
   height: 100%;
+  position: absolute;
+  top: 0;
+  left: 50%;
   object-fit: contain;
 }
 

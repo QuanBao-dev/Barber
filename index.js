@@ -87,15 +87,15 @@ function handleMenuToggle() {
 }
 
 function handleUserChangeSlidePortfolio() {
-  const sliderWrapper = $(".portfolio__slider-wrapper-container");
+  const sliderWrapper = $(".portfolio__slider-item");
   const sliderContainer = $(".portfolio__slider-container");
   const chevronLeft = $("#left-chevron-portfolio");
   const chevronRight = $("#right-chevron-portfolio");
 
   chevronLeft.addEventListener("click", () => {
-    if (indexShowSliderPortfolio - 1 >= 1) {
+    if (indexShowSliderPortfolio - 1 >= -4) {
       indexShowSliderPortfolio--;
-      moveSlider(
+      moveSliderPortfolio(
         sliderContainer,
         indexShowSliderPortfolio,
         sliderWrapper,
@@ -104,15 +104,15 @@ function handleUserChangeSlidePortfolio() {
     } else {
       if (!timeoutPortFolio) {
         indexShowSliderPortfolio--;
-        moveSlider(
+        moveSliderPortfolio(
           sliderContainer,
           indexShowSliderPortfolio,
           sliderWrapper,
           true
         );
         timeoutPortFolio = setTimeout(() => {
-          indexShowSliderPortfolio = numberOfSlidePortfolio - 2;
-          moveSlider(
+          indexShowSliderPortfolio = numberOfSlidePortfolio - 2 - 5;
+          moveSliderPortfolio(
             sliderContainer,
             indexShowSliderPortfolio,
             sliderWrapper,
@@ -125,9 +125,9 @@ function handleUserChangeSlidePortfolio() {
   });
 
   chevronRight.addEventListener("click", () => {
-    if (indexShowSliderPortfolio + 1 <= numberOfSlidePortfolio - 2) {
+    if (indexShowSliderPortfolio + 1 <= numberOfSlidePortfolio - 2 - 5) {
       indexShowSliderPortfolio++;
-      moveSlider(
+      moveSliderPortfolio(
         sliderContainer,
         indexShowSliderPortfolio,
         sliderWrapper,
@@ -136,15 +136,15 @@ function handleUserChangeSlidePortfolio() {
     } else {
       if (!timeoutPortFolio) {
         indexShowSliderPortfolio++;
-        moveSlider(
+        moveSliderPortfolio(
           sliderContainer,
           indexShowSliderPortfolio,
           sliderWrapper,
           true
         );
         timeoutPortFolio = setTimeout(() => {
-          indexShowSliderPortfolio = 1;
-          moveSlider(
+          indexShowSliderPortfolio = -4;
+          moveSliderPortfolio(
             sliderContainer,
             indexShowSliderPortfolio,
             sliderWrapper,
@@ -159,7 +159,7 @@ function handleUserChangeSlidePortfolio() {
 
 async function handleClickImage() {
   const imagesPortfolio = [...$$(".portfolio__gallery-container img")];
-  const sliderWrapper = $(".portfolio__slider-wrapper-container");
+  const sliderWrapper = $(".portfolio__slider-item");
   const sliderContainer = $(".portfolio__slider-container");
   sliderContainer.style.transition = `0s`;
   sliderContainer.style.transform = `translateX(-${
@@ -167,19 +167,20 @@ async function handleClickImage() {
   }px)`;
   await Promise.all(
     imagesPortfolio.map((imageE, index) => {
-      imageE.id = index + 1;
+      imageE.id = index + 1 - 5;
       imageE.addEventListener("click", (e) => {
         isShowSliderPortfolio = true;
         $(".portfolio__container-fixed").style.opacity = "1";
         $(".portfolio__container-fixed").style.zIndex = "10";
         indexShowSliderPortfolio = parseInt(e.target.id);
         const distance =
-          $(".portfolio__slider-wrapper-container").offsetWidth *
-          indexShowSliderPortfolio;
+          $(".portfolio__slider-item").offsetWidth *
+          indexShowSliderPortfolio *
+          -1;
         sliderContainer.style.transition = `0s`;
         $(
           ".portfolio__slider-container"
-        ).style.transform = `translateX(-${distance}px)`;
+        ).style.transform = `translateX(${distance}px)`;
         // ///////////////////////
         $(".portfolio__container-control-menu").addEventListener(
           "click",
@@ -505,6 +506,19 @@ function moveSlider(
   else sliderContainer.style.transition = "0s";
   sliderContainer.style.transform = `translateX(-${
     sliderWrapperView.offsetWidth * indexShowSlider
+  }px)`;
+}
+
+function moveSliderPortfolio(
+  sliderContainer,
+  indexShowSlider,
+  sliderWrapperView,
+  isAnimation
+) {
+  if (isAnimation) sliderContainer.style.transition = "0.5s";
+  else sliderContainer.style.transition = "0s";
+  sliderContainer.style.transform = `translateX(${
+    sliderWrapperView.offsetWidth * indexShowSlider * -1
   }px)`;
 }
 
